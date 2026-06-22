@@ -43,7 +43,7 @@ Decisões de arquitetura/projeto e o porquê delas. Formato curto.
 **Contexto:** o Hector autorizou criar o repo e dar push ("quando terminar pode subir pro github"), mas não especificou público/privado. O repo contém a **estratégia de negócio** dele (12 oportunidades, 12 projetos, roteiro de 90 dias).
 **Decisão:** criar como **privado** na conta `hectorautomacoesdev`. Workflow de GitHub Pages fica pronto, mas só publica quando o repo for público (Pages grátis exige repo público).
 **Por quê:** escolha conservadora e **reversível** — proteger a estratégia comercial. Tornar público + ativar Pages é trivial depois, se o Hector quiser mostrar a doc. Diferente do Scout (que é público por decisão dele).
-**A confirmar:** se o Hector preferir público desde já, é só avisar.
+**Atualização (22/jun/2026):** o Hector **autorizou tornar PÚBLICO**. Repo agora é público; **GitHub Pages ativado** (build via Actions) → doc em https://hectorautomacoesdev.github.io/lab-raspagem-automacao/ . O workflow `deploy-docs.yml` publica a cada push em `main`.
 
 ## D6 — Postura ética/legal explícita
 

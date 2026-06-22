@@ -36,6 +36,7 @@ export const nav: NavGroup[] = [
   {
     title: 'Ganhar dinheiro 💰',
     items: [
+      { slug: 'oportunidades-copa-curto-prazo', label: '⚽ Copa 2026 — 20 ideias rápidas' },
       { slug: 'oportunidades-negocio', label: '12 oportunidades' },
       { slug: 'projetos-para-construir', label: '12 projetos para construir' },
     ],
