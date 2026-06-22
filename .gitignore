@@ -1,0 +1,30 @@
+# Dependências
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Ambiente / segredos
+.env
+.env.*
+!.env.example
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs / temporários
+*.log
+tmp/
+.cache/
+
+# Capturas brutas grandes (mantemos só dossiês destilados)
+pesquisa/raw/
