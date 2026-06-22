@@ -57,6 +57,19 @@ Escritos, em ordem: catálogo (`00`), web scraping (`01`), Android (`02`), Windo
 - `projetos-para-construir.md`: **12 produtos** com plano em fases, stack, estimativa, dificuldade, receita e risco + roteiro de 90 dias. Destaques: Coletor Universal (a "arma"), Caça-Leads (sinergia), Radar de Preços (recorrência), RPA Desk (ticket alto).
 - Direção comercial: **dado público + automação do próprio cliente + nichos locais + conformidade LGPD** como diferencial.
 
-### Próximo passo
+### App React de documentação
 
-Construir o **app React de documentação** (lendo de `docs/`), revisar tudo e publicar no GitHub.
+Construído em `docs-app/` (Vite 6 + React 19 + TS + **Tailwind v4**, sem shadcn — ver [D4](decisoes.md)). Lê os **mesmos** `.md` de `docs/` via `import.meta.glob(..., '?raw', eager)` — fonte única, sem cópias. Tem sidebar agrupada, tema claro/escuro (persistido), realce de código, tabelas (remark-gfm), reescrita de links `.md`→rota interna, e navegação prev/next. `npm run build` (tsc + vite) passou **verde** (525 módulos). Bundle 222KB gzip — grande por causa do highlight.js (otimização futura, igual ao Scout).
+
+### Revisão e publicação
+
+- **Revisão:** conferi que os 13 arquivos de `docs/` batem 1:1 com os slugs da navegação (sem órfãos/faltantes); corrigi 3 links de referência quebrados (`[fonte-cnpj]` → texto normal); rebuild verde.
+- **Publicação:** repo criado na conta `hectorautomacoesdev` como **PRIVADO** (ver [D7](decisoes.md) — protege a estratégia de negócio; reversível). Branch renomeado `master`→`main`. 8+ commits lógicos. Workflow de **GitHub Pages** incluído (`.github/workflows/deploy-docs.yml`), pronto para quando o repo virar público.
+- **URL:** https://github.com/hectorautomacoesdev/lab-raspagem-automacao
+
+### Pontos para o Hector decidir / próximos passos
+
+1. **Público vs privado:** deixei privado. Se quiser publicar a doc (Pages), é só tornar público.
+2. **Nome do repo/projeto:** provisório (`lab-raspagem-automacao`) — renomeável.
+3. **Próxima fase sugerida:** transformar a stack em **skills do Claude Code** (ex.: `coletar-dados`, `rpa-desktop`, `monitorar-precos`) e começar pelo **Coletor Universal** + **Caça-Leads** (sinergia com a Fábrica de Sites).
+4. **Limitação honesta:** não assisti aos vídeos do YouTube; baseei-me nos repos `tutorial_*` (código que acompanha os vídeos) e nas descrições. Se quiser, numa próxima sessão dá para aprofundar vídeos específicos que o Hector indicar.

@@ -37,7 +37,7 @@
 ## 2. ⭐ Caça-Leads Local — turbina a Fábrica de Sites
 - **Problema:** prospecção manual é lenta; faltam contato e qualificação.
 - **Como funciona:** dado um segmento+cidade, busca negócios (mapas/diretórios), detecta **quem não tem site**, **enriquece** (telefone/IG/CNPJ) e **qualifica** (score). Exporta para o funil de prospecção.
-- **Stack/técnicas:** scraping + cruzamento pandas + dado público de CNPJ ([fonte-cnpj]); reaproveita o **Scout** que você já tem.
+- **Stack/técnicas:** scraping + cruzamento pandas + dado público de CNPJ (Dados Abertos da Receita Federal); reaproveita o **Scout** que você já tem.
 - **Plano:** F1 coletor+enriquecedor (1 sem) → F2 score+export+dedupe (1 sem).
 - **Receita:** uso próprio (mais vendas de site) **ou** vender listas/serviço a terceiros.
 - **Risco:** ⚠️ (B2B/público ok; evitar PII sensível). **Maior sinergia com seu negócio atual.**
@@ -85,7 +85,7 @@
 ## 8. Enriquecedor de CNPJ/Contatos — microserviço/API
 - **Problema:** bases de leads vêm "secas" (só nome).
 - **Como funciona:** recebe CNPJ/nome → devolve dados públicos (situação, CNAE, endereço, telefone/site quando público) via API.
-- **Stack/técnicas:** dado aberto da Receita ([fonte-cnpj]) + scraping complementar + FastAPI.
+- **Stack/técnicas:** dado aberto da Receita (Dados Abertos da Receita Federal) + scraping complementar + FastAPI.
 - **Plano:** F1 base CNPJ local + API (1 sem) → F2 enriquecimento web + cache (1 sem).
 - **Receita:** por consulta/crédito; alimenta o **Caça-Leads** (#2).
 - **Risco:** ⚠️ (LGPD: focar dado **empresarial/público**, não PII de pessoa física).

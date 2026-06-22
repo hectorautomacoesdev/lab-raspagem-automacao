@@ -26,7 +26,7 @@
 ## 3. Geração e enriquecimento de leads B2B
 - **O que:** montar listas segmentadas (segmento + cidade + contato) e **enriquecer** (telefone, e-mail, redes, site/sem site).
 - **Quem paga:** times de vendas, agências, prestadores locais — **e o seu próprio funil da Fábrica de Sites**.
-- **Técnica:** scraping de diretórios/mapas + dado público de CNPJ ([experimento fonte-cnpj]) + cruzamento em pandas.
+- **Técnica:** scraping de diretórios/mapas + dado público de CNPJ (Dados Abertos da Receita Federal) + cruzamento em pandas.
 - **Esforço:** 🟢 · **Risco:** ⚠️ (evitar PII sensível; B2B/público é mais tranquilo) · **Potencial:** R$ 1–6k.
 
 ## 4. RPA para PMEs (automação de tarefas repetitivas)
