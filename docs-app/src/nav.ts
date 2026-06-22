@@ -42,6 +42,13 @@ export const nav: NavGroup[] = [
     ],
   },
   {
+    title: 'Ethical Hacking 🔐',
+    items: [
+      { slug: '07-ethical-hacking', label: '07 · Estudo de ethical hacking' },
+      { slug: 'ethical-hacking-oportunidades', label: '20 formas de monetizar (setor)' },
+    ],
+  },
+  {
     title: 'Processo',
     items: [
       { slug: 'decisoes', label: 'Decisões (ADRs)' },

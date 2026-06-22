@@ -73,3 +73,24 @@ Construído em `docs-app/` (Vite 6 + React 19 + TS + **Tailwind v4**, sem shadcn
 2. **Nome do repo/projeto:** provisório (`lab-raspagem-automacao`) — renomeável.
 3. **Próxima fase sugerida:** transformar a stack em **skills do Claude Code** (ex.: `coletar-dados`, `rpa-desktop`, `monitorar-precos`) e começar pelo **Coletor Universal** + **Caça-Leads** (sinergia com a Fábrica de Sites).
 4. **Limitação honesta:** não assisti aos vídeos do YouTube; baseei-me nos repos `tutorial_*` (código que acompanha os vídeos) e nas descrições. Se quiser, numa próxima sessão dá para aprofundar vídeos específicos que o Hector indicar.
+
+---
+
+## Sessão 2 — 22/jun/2026 (continuação)
+
+O Hector aprovou o trabalho e pediu mais coisas. Atendido na ordem que ele definiu:
+
+### Repo público + Pages
+- Autorizou tornar **público** → feito. **GitHub Pages ativado** (build via Actions); doc no ar em https://hectorautomacoesdev.github.io/lab-raspagem-automacao/ . Nome do repo mantido. D7 atualizada.
+
+### Oportunidades de curto prazo — Copa do Mundo 2026
+- Pesquisa externa: a Copa 2026 (11/jun→19/jul, EUA/Canadá/México, 48 seleções, 104 jogos, 1,5bi+ espectadores) está **acontecendo agora** (fase de grupos) — timing perfeito p/ curto prazo.
+- Escrevi `oportunidades-copa-curto-prazo.md` com **20 ideias rápidas** (deploy em dias), em 5 blocos: dados de apostas (odds/arbitragem/stats — o forte do Hans), conteúdo automatizado (bots/cards/bolão), e-commerce/afiliados, **local/Guarujá** (kit p/ bares — sinergia c/ Fábrica de Sites) e info-produtos. Com "Comece HOJE" (top 5), nota de **apostas reguladas no Brasil** (jogo responsável) e ressalva de direitos autorais de transmissão.
+
+### Estudo de Ethical Hacking (com subagente)
+- O Hector autorizou **subagentes** → lancei um `general-purpose` para pesquisar o cenário completo (pentest, bug bounty, certificações, ferramentas, conexão com as skills do Hans, mercado BR, legalidade, 10-20 formas de monetizar). Voltou um dossiê forte com fontes 2025-2026.
+- Sintetizei em 2 docs: `07-ethical-hacking.md` (**estudo/deep-dive**) e `ethical-hacking-oportunidades.md` (**20 formas de monetizar no SETOR**, informativo). **Achado-chave:** a maior sinergia com o Hans é **pentest mobile** (emulador+root/Magisk+Frida+Burp) — raro e bem pago. Recon/OSINT = scraping; fuzzing = automação acelerada (Cython/C).
+- **Respeitando o pedido do Hector:** NÃO montei planos de negócio nossos de ethical hacking — só estudo + referências + mapeamento. Os nossos planos ficam para quando ele pedir.
+
+### Estado
+Tudo integrado no app React (novo grupo "Ethical Hacking" + a Copa em "Ganhar dinheiro"), build verde, no GitHub (público, Pages no ar).
