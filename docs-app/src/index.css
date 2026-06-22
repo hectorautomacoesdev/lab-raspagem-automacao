@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import "highlight.js/styles/github-dark.css";
+
+/* Tema via classe .dark no <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light dark;
+}
+
+html { scroll-behavior: smooth; }
+
+/* ---- Estilo do conteúdo Markdown ("prose" caseiro, sem plugin) ---- */
+.prose { @apply text-slate-700 leading-relaxed; }
+.dark .prose { @apply text-slate-300; }
+
+.prose h1 { @apply text-3xl font-bold tracking-tight mt-2 mb-4 text-slate-900; }
+.dark .prose h1 { @apply text-white; }
+.prose h2 { @apply text-2xl font-semibold tracking-tight mt-10 mb-3 pb-1 border-b border-slate-200 text-slate-900; }
+.dark .prose h2 { @apply border-slate-700 text-white; }
+.prose h3 { @apply text-xl font-semibold mt-6 mb-2 text-slate-900; }
+.dark .prose h3 { @apply text-white; }
+.prose h4 { @apply text-lg font-semibold mt-4 mb-1 text-slate-900; }
+.dark .prose h4 { @apply text-slate-100; }
+.prose p { @apply my-3; }
+.prose ul { @apply my-3 list-disc pl-6 space-y-1; }
+.prose ol { @apply my-3 list-decimal pl-6 space-y-1; }
+.prose li { @apply marker:text-slate-400; }
+.prose a { @apply text-indigo-600 font-medium underline-offset-2 hover:underline; }
+.dark .prose a { @apply text-indigo-400; }
+.prose blockquote { @apply my-4 border-l-4 border-indigo-300 bg-indigo-50 px-4 py-2 rounded-r-md text-slate-700; }
+.dark .prose blockquote { @apply border-indigo-500/60 bg-indigo-500/10 text-slate-300; }
+.prose strong { @apply font-semibold text-slate-900; }
+.dark .prose strong { @apply text-white; }
+.prose hr { @apply my-8 border-slate-200; }
+.dark .prose hr { @apply border-slate-700; }
+
+/* Código inline */
+.prose :not(pre) > code {
+  @apply rounded bg-slate-100 px-1.5 py-0.5 text-[0.85em] font-mono text-pink-600;
+}
+.dark .prose :not(pre) > code { @apply bg-slate-800 text-pink-300; }
+
+/* Blocos de código (sempre escuros, casa com github-dark) */
+.prose pre {
+  @apply my-4 overflow-x-auto rounded-lg p-4 text-sm leading-relaxed;
+  background: #0d1117;
+  border: 1px solid #30363d;
+}
+.prose pre code { @apply font-mono; background: transparent !important; padding: 0; }
+
+/* Tabelas */
+.prose table { @apply my-5 w-full border-collapse text-sm block overflow-x-auto; }
+.prose thead { @apply border-b-2 border-slate-300; }
+.dark .prose thead { @apply border-slate-600; }
+.prose th { @apply px-3 py-2 text-left font-semibold text-slate-900 whitespace-nowrap; }
+.dark .prose th { @apply text-white; }
+.prose td { @apply px-3 py-2 border-t border-slate-200 align-top; }
+.dark .prose td { @apply border-slate-700; }
+.prose tbody tr:hover { @apply bg-slate-50; }
+.dark .prose tbody tr:hover { @apply bg-slate-800/40; }
