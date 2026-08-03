@@ -1,9 +1,11 @@
 # Dependências
 node_modules/
 .venv/
+.venv-scraping/
 venv/
 __pycache__/
 *.pyc
+.pytest_cache/
 
 # Build
 dist/
@@ -28,3 +30,15 @@ tmp/
 
 # Capturas brutas grandes (mantemos só dossiês destilados)
 pesquisa/raw/
+
+# Dados coletados e artefatos de runtime (não versionar)
+*.db
+*.sqlite
+apps/*/data/
+data/shots/
+# Backups da conf do BlueStacks (ficam em ProgramData, fora do repo — por garantia)
+*.conf.bak-*
+
+# Binários de ferramentas (baixáveis; não versionar) — mantemos só os scripts
+tools/platform-tools/
+tools/*.exe
