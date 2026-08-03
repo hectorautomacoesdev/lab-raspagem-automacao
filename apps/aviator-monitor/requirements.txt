@@ -1,0 +1,26 @@
+# Núcleo do pipeline (já instalados no venv .venv-scraping)
+whacamolefinder      # gatilho: diff entre frames -> regiões que mudaram
+opencv-python        # (dep do whacamolefinder) processamento de imagem
+numpy
+numexpr
+pandas
+rich                 # monitor de CLI ao vivo
+pytesseract          # OCR (usa o Tesseract instalado no sistema)
+pillow               # dep do pytesseract
+
+# Auditor de justiça (fairness.py)
+scipy                # chi2, KS, Pareto
+statsmodels          # runs test, Ljung-Box
+
+# Dashboard
+streamlit            # streamlit run aviator_monitor/dashboard.py
+
+# Controle do BlueStacks (opcional — reforça a descoberta de porta ADB; há fallback na conf)
+# bstconnect         # hansalemaos: portas ADB dinâmicas -> DataFrame
+
+# Captura Android — instalar ao precisar de mais fps (Fase 2)
+# adbnativeblitz     # frames do Android via screenrecord nativo (sem root)
+# cyandrocel         # navegação/UI + shell; requer MSVC (já instalado)
+
+# Dev
+pytest               # suíte de testes
