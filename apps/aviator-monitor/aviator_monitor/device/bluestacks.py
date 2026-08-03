@@ -206,9 +206,33 @@ class BlueStacks:
                 out.append((int(pid), cmd))
         return out
 
+    def _adb_reachable(self, instance: str) -> bool:
+        """Fallback de 'está no ar?': a serial ADB da instância responde e bootou?"""
+        serial = self.adb_serial(instance)
+        if not serial:
+            return False
+        from .adb import Device
+        dev = Device(serial=serial)
+        dev.connect()
+        try:
+            return dev.is_online()
+        except Exception:
+            return False
+
     def is_running(self, instance: str) -> bool:
+        """Instância no ar?
+
+        Gotcha de Windows: sem elevação, `CommandLine` do HD-Player vem VAZIO (não dá p/
+        casar por `--instance`). Então: (1) casa por cmdline quando visível; (2) se há player
+        rodando mas sem cmdline legível, cai no fallback por ADB (a serial responde?).
+        """
+        procs = self._player_procs()
         needle = f"--instance {instance}".lower()
-        return any(needle in cmd.lower() for _, cmd in self._player_procs())
+        if any(needle in cmd.lower() for _, cmd in procs):
+            return True
+        if procs and all(not cmd.strip() for _, cmd in procs):
+            return self._adb_reachable(instance)
+        return False
 
     def _pid_of(self, instance: str) -> int | None:
         needle = f"--instance {instance}".lower()
@@ -240,10 +264,19 @@ class BlueStacks:
         return self.start(instance, package=package)
 
     def stop(self, instance: str) -> bool:
-        """Fecha SÓ a instância indicada (taskkill do HD-Player com aquele --instance)."""
+        """Fecha a instância. Prefere o PID exato (por cmdline); sem cmdline legível, só encerra
+        com segurança se houver UM player rodando (caso comum). Vários + cmdline oculta → recusa."""
+        procs = self._player_procs()
         pid = self._pid_of(instance)
         if pid is None:
-            return False
+            if not procs:
+                return False
+            if len(procs) == 1:
+                pid = procs[0][0]                      # único player: seguro encerrar
+            else:
+                raise RuntimeError(
+                    "Vários HD-Player no ar e a linha de comando não está visível. "
+                    "Rode elevado (p/ identificar por instância) ou pare pela GUI.")
         subprocess.run(["taskkill", "/PID", str(pid), "/T", "/F"],
                        capture_output=True, text=True)
         return True
