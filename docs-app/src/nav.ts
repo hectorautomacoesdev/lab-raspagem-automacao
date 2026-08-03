@@ -30,6 +30,7 @@ export const nav: NavGroup[] = [
     items: [
       { slug: '08-controle-device-adb', label: '08 · Controle do device via ADB' },
       { slug: '09-controle-bluestacks', label: '09 · BlueStacks + login + dashboard' },
+      { slug: '10-manual-de-uso', label: '10 · Manual de uso (passo a passo)' },
     ],
   },
   {
