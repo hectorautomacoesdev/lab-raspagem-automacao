@@ -26,6 +26,13 @@ export const nav: NavGroup[] = [
     ],
   },
   {
+    title: 'Fase 2 · Automação Android 🎰',
+    items: [
+      { slug: '08-controle-device-adb', label: '08 · Controle do device via ADB' },
+      { slug: '09-controle-bluestacks', label: '09 · BlueStacks + login + dashboard' },
+    ],
+  },
+  {
     title: 'Conceitos & Mercado',
     items: [
       { slug: '05-conceitos', label: '05 · Conceitos do Hans' },

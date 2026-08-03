@@ -45,8 +45,41 @@ Decisões de arquitetura/projeto e o porquê delas. Formato curto.
 **Por quê:** escolha conservadora e **reversível** — proteger a estratégia comercial. Tornar público + ativar Pages é trivial depois, se o Hector quiser mostrar a doc. Diferente do Scout (que é público por decisão dele).
 **Atualização (22/jun/2026):** o Hector **autorizou tornar PÚBLICO**. Repo agora é público; **GitHub Pages ativado** (build via Actions) → doc em https://hectorautomacoesdev.github.io/lab-raspagem-automacao/ . O workflow `deploy-docs.yml` publica a cada push em `main`.
 
+## D8 — Camada de controle do device: técnica do Hans reimplementada + `input tap` no clique
+
+**Contexto:** na Fase 2 precisamos controlar o Android (BlueStacks, sem root) para ler a tela e agir.
+O Hans tem libs prontas (`androdf` p/ uiautomator→df, `adbnativeblitz` p/ captura), mas só o
+`whacamolefinder` está instalado.
+**Decisão:** (1) **reimplementar** a técnica "tela → DataFrame" num módulo enxuto nosso
+(`device/androui.py` via `uiautomator dump`) em vez de depender das libs dele; usar `screencap` para
+captura por ora. (2) No cursor, **movimento** por `input mouse motionevent MOVE` (glide natural), mas
+**clique por `input tap`** — não por `motionevent DOWN/UP`.
+**Por quê:** (1) menos dependências, código sob nosso controle (melhor p/ robustez e a história de LGPD);
+as libs do Hans entram como **otimização** quando precisarmos de mais fps. (2) **Medido no device**: cada
+`input` é um gesto separado no ADB — `DOWN`/`UP` soltos viram long-press (menu "Editar" do launcher) e
+`input mouse tap` não chega ao handler; só um gesto único (`tap`) forma clique limpo.
+**Verificação:** demo ponta-a-ponta (home→pasta→Chrome, achando botão por texto) + `run.py --backend adb`
+gravando no SQLite + `tests/test_device.py`. Ver [doc 08](08-controle-device-adb).
+
 ## D6 — Postura ética/legal explícita
 
 **Contexto:** parte do trabalho do Hans burla anti-bot de casas de apostas.
 **Decisão:** documentar a técnica como **estudo**, mas direcionar as recomendações comerciais para dados públicos, automação do próprio negócio e serviços autorizados. Cada projeto proposto leva nota de risco.
 **Por quê:** sustentabilidade do negócio e conformidade (ToS, LGPD, leis de jogo).
+
+## D9 — Controle do BlueStacks por conf + CLI (sem clique) e limites do fluxo Betano
+
+**Contexto:** toda sessão exigia abrir o Multi-Instance Manager na mão para criar/ligar a instância e o
+ADB — o BlueStacks 5 não tem CLI oficial de criação. Precisávamos automatizar o ambiente e o login.
+**Decisão:** (1) módulo `device/bluestacks.py` que opera pelas três superfícies reais — `HD-Player.exe`
+(start/launchApp), `bluestacks.conf` (settings + descoberta de porta ADB) e o registro (caminhos) — com
+**funções puras de conf** testáveis e **backup antes de escrever**. `clone_instance` fica **experimental**
+(copia GB + mexe na conf viva; exige `confirm=True`). (2) Fluxo `betano.py` com **credenciais só de ENV**,
+**detecção de CAPTCHA que só AVISA** (não resolve) e **calibração por snapshot** (print + DataFrame da tela)
+porque os seletores da casa mudam. (3) **Não** construir solver de CAPTCHA nem toolkit de evasão de fraude.
+**Por quê:** destrava a operação sem cliques; a porta ADB vem da conf (fim do chute de 5555); a linha ética
+fica no código, não só na doc (o repo é público). Detectar CAPTCHA é observabilidade; resolvê-lo seria
+circumvenção — fora do escopo.
+**Verificação:** `device/bluestacks.py` rodado contra a máquina real (list/ports/status batendo com o
+`Rvc64` Android 11); `tests/test_bluestacks.py` (conf pura) e `tests/test_betano.py` (escape de input +
+detector de CAPTCHA + credenciais de ENV); dashboard validado headless via `AppTest`. Ver [doc 09](09-controle-bluestacks).

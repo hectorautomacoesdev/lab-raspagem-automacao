@@ -94,3 +94,65 @@ O Hector aprovou o trabalho e pediu mais coisas. Atendido na ordem que ele defin
 
 ### Estado
 Tudo integrado no app React (novo grupo "Ethical Hacking" + a Copa em "Ganhar dinheiro"), build verde, no GitHub (público, Pages no ar).
+
+---
+
+## Sessão 6 — 07/jul/2026 (Fase 2: device real no ar)
+
+O Hector subiu a instância **Android 11** no BlueStacks e ligou o ADB. Objetivo da sessão:
+validar o controle do device e documentar tudo. (As Sessões 3–5 — spec, auditor de justiça e
+pesquisa "não dá pra prever o Aviator" — estão na memória do projeto; o diário retoma aqui.)
+
+### O que foi feito e **testado no device real**
+- **ADB ligado e estável**: instância `Rvc64` em `127.0.0.1:5555`, Android **11**, x86_64, tela 1280×720.
+  Achado: o túnel cai (`error: closed`) até o toggle de ADB ser ligado de fato + reiniciar a instância.
+- **Captura**: `adb exec-out screencap` → PNG válido; virou `Device.screencap()` (~3–5 fps).
+- **`whacamolefinder` ao vivo**: monitorando enquanto o cursor abria pasta/Chrome — pegou cada mudança
+  (popup ~194k px; Chrome = tela inteira 921.600 px), zero disparo com a tela parada.
+- **Ler a tela sem OCR (jeito do Hans)**: novo `device/androui.py` — `uiautomator dump` → **DataFrame**;
+  achou e clicou *"Use without an account"* **por texto** dentro do Chrome. Limitação honesta: o launcher
+  do BlueStacks não rotula ícones (usamos a estrutura/bounds lá).
+- **Cursor natural**: novo `device/cursor.py` — glide em curva de Bézier (`input mouse motionevent MOVE`)
+  + clique (`input tap`). Gotcha medido: `motionevent DOWN/UP` soltos viram long-press → usar `tap`.
+- **Backend ADB do pipeline**: `capture.adb_source` deixou de ser stub; `run.py --backend adb` capturou
+  e gravou no SQLite end-to-end.
+
+### Novos artefatos
+- Código: `aviator_monitor/device/{adb,androui,cursor}.py` + `examples/demo_cursor_uiautomator.py`.
+- Testes: `tests/test_device.py` (uiautomator→DataFrame + geometria do cursor) — **passa**.
+  Suíte toda verde: core, device, fairness (3/3), calibração (0/20), run_fake (~93%).
+- Doc: **[08 · Controle do device via ADB](08-controle-device-adb)** (novo grupo "Fase 2" no menu).
+
+### Pendente
+Só o **alvo**: abrir Betano (demo) → Aviator, calibrar `strip_roi`, testar o **websocket** antes do OCR,
+então coletar e rodar o auditor. Ver [D8](decisoes.md).
+
+## Sessão 7 — 02/ago/2026 · BlueStacks sem clique, fluxo de login e dashboard
+
+Objetivo do Hector: parar de operar o BlueStacks na mão e começar a testar a raspagem na Betano de
+verdade (login → Aviator → monitorar), caçando padrão — com a postura honesta de que, se houver falha
+de justiça, o auditor pega; se não, isso também é resultado. Escopo reduzido pelo próprio Hector:
+**sem solver de CAPTCHA** (só detectar/avisar).
+
+### O que foi construído e verificado
+- **`device/bluestacks.py` + CLI** — sobe/derruba/consulta instâncias sem clique, via as três superfícies
+  reais (HD-Player.exe, `bluestacks.conf`, registro). `list/ports/start/stop/set-adb/wait/launch/status`.
+  **Rodado contra a máquina real**: leu o `Rvc64` (Android 11, 4 GB, 1280×720, ADB on, porta da conf).
+  Parsing de conf em funções puras + backup antes de escrever. `clone_instance` experimental (confirm=True).
+- **`betano.py`** — fluxo site→login→Aviator. **Credenciais só de ENV**; **CAPTCHA detectado e avisado,
+  nunca resolvido**; cursor humano + leitura de tela por DataFrame reaproveitados; `snapshot` de calibração
+  (print + CSV da tela) porque os seletores da casa só se acertam na tela real.
+- **`dashboard.py` (Streamlit)** — KPIs, **distribuição observada × esperada** (modelo justo), **veredito do
+  auditor** (χ²/KS + runs/Ljung-Box, com efeito material), cauda ao vivo colorida. Validado **headless**
+  com `AppTest` (sem exceção).
+- **Testes**: `test_bluestacks.py` (5) + `test_betano.py` (8) novos. **Suíte toda verde: 23 passando.**
+- **Doc nova**: [09 · BlueStacks + login + dashboard](09-controle-bluestacks) (grupo Fase 2). ADR [D9](decisoes.md).
+
+### Pesquisa (registrada na doc 09)
+`hansalemaos/bstconnect` (portas ADB → DataFrame), `HD-Player.exe --cmd launchApp`, Aviator via **websocket**
+(ref. `IsoDevMate/AVIATOR`), preditores = golpe (confirma a nossa tese), e **fontes públicas** de histórico
+de Aviator p/ alimentar o auditor sem entrar em conta.
+
+### Pendente
+Rodar `betano snapshot` na tela real → fixar `Selectors`; calibrar `strip_roi`; testar websocket antes do
+OCR; coletar 2k–20k rodadas (banco separado do fake) e rodar o auditor.
