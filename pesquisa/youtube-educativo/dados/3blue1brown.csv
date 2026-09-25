@@ -1,0 +1,153 @@
+ordem_mais_novo_primeiro,id,titulo,duracao_min,views
+0,Nbwv5wHQoj0,The last IMO problem AI could not solve,51.9,
+1,GlYgs6v2YfU,But what is cross-entropy? | Compression is Intelligence Part 2,33.9,800000
+2,l6DKRf-fAAM,Reinventing Entropy | Compression is Intelligence Part 1,32.3,1500000
+3,ldxFjLJ3rVY,How (and why) to take a logarithm of an image,44.9,2100000
+4,fsLh-NYhOoU,The most beautiful formula not enough people understand,60.4,1400000
+5,BHdbsHFs2P0,"Why you can't comb a hairy ball, and why we care",29.7,3400000
+6,FE-hM1kRK4Y,Why Laplace transforms are so useful,23.1,822000
+7,j0wJBEZdwLs,But what is a Laplace Transform?,34.7,1900000
+8,-j8PzkZ70Lg,The Physics of Euler's Formula | Laplace Transform Prelude,27.8,1100000
+9,M-MgQC6z3VU,What was Euclid really doing? | Guest video by Ben Syversen,33.5,
+10,_BrFKp-U8GI,Exploration & Epiphany | Guest video by Paul Dancstep,52.2,512000
+11,itRV2jEtV8Q,Simulating and understanding phase change | Guest video by Vilas Winstein,41.0,
+12,4NlrfOl0l8U,The AI that solved IMO Geometry Problems | Guest video by @Aleph 0,13.5,
+13,iv-5mZ_9CPY,But how do AI images and videos actually work? | Guest video by Welch Labs,37.3,
+14,Dlsa9EBKDGI,Where my explanation of Grover’s algorithm failed,16.4,684000
+15,RQWpF2Gb-gU,But what is quantum computing?  (Grover's Algorithm),36.9,4000000
+16,6dTyOl1fmDo,Why colliding blocks compute pi,26.1,6400000
+17,hFMaT9oRbs4,Terence Tao continuing history’s cleverest cosmological measurements,25.6,1600000
+18,YdOXS_9_P4U,Terence Tao on the cosmic distance ladder,28.6,6200000
+19,IQqtsm-bBRU,This open problem taught me what topology is,27.4,2500000
+20,LPZh9BOjkQs,Large Language Models explained briefly,8.0,7700000
+21,piJkuavhV50,Solving problems by adding a dimension,29.7,1700000
+22,rbu7Zu5X1zI,How I animate 3Blue1Brown | A Manim demo with Ben Sparks,53.7,3200000
+23,EmKQsSDlaa4,How are holograms possible?,46.4,7000000
+24,9-Jl0dxWQs8,How might LLMs store facts | Deep Learning Chapter 7,22.7,2200000
+25,W3I3kAg2J7w,"What ""Follow Your Dreams"" Misses | Harvey Mudd Commencement Speech 2024",15.5,1400000
+26,eMlx5fFNoYc,"Attention in transformers, step-by-step | Deep Learning Chapter 6",26.2,4600000
+27,wjZofJX0v4M,"Transformers, the tech behind LLMs | Deep Learning Chapter 5",27.2,11000000
+28,Cz4Q4QOuoo8,Answering viewer questions about refraction,13.4,1100000
+29,KTzGBJPuJwM,"But why would light ""slow down""? | Visualizing Feynman's lecture on the refractive index",28.6,2800000
+30,6a1fLEToyvU,25 Math explainers you may enjoy | SoME3 results,22.2,645000
+31,aXRTczANuIs,How wiggling charges give rise to light,21.6,1800000
+32,QCX62YJCmGk,This tests your understanding of light | The barber pole effect,9.9,1400000
+33,d_qvLDhkg00,A pretty reason why Gaussian + Gaussian = Gaussian,13.3,955000
+34,YtkIWDE36qU,"This pattern breaks, but for a good reason | Moser's circle problem",16.2,2800000
+35,NOCsdhzo6Jg,How They Fool Ya (live) | Math parody of Hallelujah,4.0,1100000
+36,IaSGqQa5O-M,Convolutions | Why X+Y in probability is a beautiful mess,27.4,998000
+37,cy8r7WSuT1I,Why π is in the normal distribution (beyond integral tricks),24.8,2200000
+38,zeJD6dqJ5lo,But what is the Central Limit Theorem?,31.2,4500000
+39,KuXjwB4LzSA,But what is a convolution?,23.0,3700000
+40,851U557j6HE,Researchers thought this was a bug (Borwein integrals),17.4,4600000
+41,cDofhN-RJqg,What makes a great math explanation? | SoME2 results,17.0,767000
+42,VYQVlVoWoPY,How to lie using visual proofs,18.8,4200000
+43,bOXCLR3Wric,Olympiad level counting  (Generating functions),34.6,2300000
+44,fRed0Xmc2Wg,"Oh, wait, actually the best Wordle opener is not “crane”…",10.9,6600000
+45,v68zYyaEmEA,Solving Wordle using information theory,30.6,11000000
+46,ltLUadnCyi0,A tale of two problem solvers | Average cube shadow area,40.1,3500000
+47,F3Qixy-r_rQ,2021 Summer of Math Exposition results,12.7,800000
+48,LqbZpur38nw,"Beyond the Mandelbrot set, an intro to holomorphic dynamics",27.6,1700000
+49,-RdOwhmqP5s,Newton’s fractal (which Newton knew nothing about),26.1,3100000
+50,ojjzXyQCzso,Make math videos! | Summer of Math Exposition announcement,24.4,739000
+51,e50Bj7jn9IQ,"A quick trick for computing eigenvalues | Chapter 15, Essence of linear algebra",13.2,1300000
+52,O85OWBJ2ayo,How (and why) to raise e to the power of a matrix | DE6,27.1,3500000
+53,lG4VkPoG3ko,"The medical test paradox, and redesigning Bayes' rule",21.2,1400000
+54,b3NxrZOu_CE,Hamming codes part 2: The one-line implementation,16.8,950000
+55,X8jsijhllIA,But what are Hamming codes? The origin of error correction,20.1,3000000
+56,mH0oCDa74tE,"Group theory, abstraction, and the 196,883-dimensional monster",22.0,3700000
+57,wTJI_WuZSwE,The impossible chessboard puzzle,18.7,2100000
+58,D__UaR5MQao,The DP-3T algorithm for contact tracing (with Nicky Case),4.4,364000
+59,ppWPuXsnf1Q,Lockdown math announcement,2.2,982000
+60,ZA4JkHKZM50,"Why “probability of 0” does not mean “impossible” | Probabilities of probabilities, part 2",10.0,3300000
+61,gxAaO2rsdIs,Simulating an epidemic,23.2,5200000
+62,8idr1WZ1A7Q,"Binomial distributions | Probabilities of probabilities, part 1",12.6,2600000
+63,Kas0tIxDvrg,Exponential growth and epidemics,8.9,6000000
+64,U_85TaXbeIo,The quick proof of Bayes' theorem,3.8,564000
+65,HZGCoVF3YvM,"Bayes theorem, the geometry of changing beliefs",15.2,5900000
+66,Agbh95KyWxY,"Q&A with Grant, windy walk edition",19.1,450000
+67,EK32jo7i5LQ,Why do prime numbers make these spirals? | Dirichlet’s theorem and pi approximations,22.4,7600000
+68,M64HUIJFTZM,"The unexpectedly hard windmill question (2011 IMO, P2)",16.1,5600000
+69,v0YEaeIClKY,"e^(iπ) in 3.14 minutes, using dynamics | DE5",4.1,3300000
+70,-qgreAUpPwM,Pure Fourier series animation montage,12.5,689000
+71,r6sGWTCMz2k,But what is a Fourier series?  From heat flow to drawing with circles | DE4,24.8,18000000
+72,ToIXSwZ1pJU,Solving the heat equation | DE3,14.2,1600000
+73,ly4S0oi3Yz8,But what is a partial differential equation?  | DE2,17.6,3200000
+74,p_di4Zn4wz4,"Differential equations, a tourist's guide | DE1",27.3,6000000
+75,jBsC34PxzoM,"Cramer's rule, explained geometrically | Chapter 12, Essence of linear algebra",12.2,1500000
+76,brU5yLm9DZM,How colliding blocks act like a beam of light...to compute pi.,14.7,1300000
+77,HEfHFsfGXjs,The most unexpected answer to a counting puzzle,5.2,14000000
+78,GNcFjFmqEc8,But why is a sphere's surface area four times its shadow?,15.8,8700000
+79,yuVqxCSsE7c,Using topology for discrete problems | The Borsuk-Ulam theorem and stolen necklaces,19.4,961000
+80,_UoTTq651dE,Why 5/3 is a fundamental constant for turbulence,11.5,794000
+81,zjMuIxRvygQ,"Quaternions and 3d rotation, explained interactively",6.0,1500000
+82,d4EgbgTm0Bg,Visualizing the 4d numbers Quaternions,31.9,5500000
+83,Qe6o9j4IjTo,Q&A with Grant Sanderson (3blue1brown),10.3,826000
+84,pQa_tWZmlGs,Why slicing a cone gives an ellipse (beautiful proof),12.9,2300000
+85,VcgJro0sTiM,Other math channels you'd enjoy,8.2,241000
+86,rB83DpBJQsE,"Divergence and curl:  The language of Maxwell's equations, fluid flow, and more",15.7,5200000
+87,CfW845LNObM,"The other way to visualize derivatives | Chapter 12, Essence of calculus",14.4,3800000
+88,8GPy_UMV-08,"The Wallis product for pi, proved geometrically",25.4,910000
+89,b7FxPsqfkOY,Winding numbers and domain coloring,23.2,972000
+90,bcPTiiiYDs8,How pi was almost 6.283185...,5.9,1700000
+91,d-o3eB9sfls,Why is pi here?  And why is it squared?  A geometric answer to the Basel problem,17.1,7300000
+92,MBnnXbOM5S4,"The more general uncertainty principle, regarding Fourier transforms",18.1,2300000
+93,spUNpyF58BY,But what is the Fourier Transform?  A visual introduction.,19.7,12000000
+94,VvCytJvd4H0,Why this puzzle is impossible,19.6,3200000
+95,liL66CApESk,Q&A #2 + Net Neutrality Nuance,4.1,149000
+96,OkmNXy7er84,The hardest problem on the hardest test,11.2,16000000
+97,tIeHLnjs5U8,Backpropagation calculus | Deep Learning Chapter 4,10.3,3900000
+98,Ilg3gGewQ5U,"Backpropagation, intuitively | Deep Learning Chapter 3",12.8,6200000
+99,IHZwWFHWa-w,"Gradient descent, how neural networks learn | Deep Learning Chapter 2",20.6,9500000
+100,aircAruvnKk,But what is a neural network? | Deep learning chapter 1,18.7,24000000
+101,MzRCDLre1b4,Some light quantum mechanics (with minutephysics),22.4,
+102,zwAD6dRSVyI,Thinking outside the 10-dimensional box,25.2,3100000
+103,3s7h2MHQtxc,Hilbert's Curve: Is infinite math useful?,18.3,2400000
+104,S9JGmA5_unY,How secure is 256 bit security?,5.1,3600000
+105,bBC-nXj3Ng4,But how does bitcoin actually work?,25.3,18000000
+106,QJYmyhnaaek,"All possible pythagorean triples, visualized",14.9,4000000
+107,NaL_Cb42WyY,Pi hiding in prime regularities,29.7,2800000
+108,3d6DsjIBzJ4,"Taylor series | Chapter 11, Essence of calculus",22.3,5100000
+109,BLkz5LGWihw,"Higher order derivatives | Chapter 10, Essence of calculus",5.7,909000
+110,FnJqaIESC2s,"What does area have to do with slope? | Chapter 9, Essence of calculus",12.7,1600000
+111,rfG8ce4nNh0,"Integration and the fundamental theorem of calculus | Chapter 8, Essence of calculus",20.8,3100000
+112,kfF40MiS7zA,"Limits, L'Hôpital's rule, and epsilon delta definitions | Chapter 7, Essence of calculus",18.4,2600000
+113,qb40J4N1fa4,"Implicit differentiation, what's going on here? | Chapter 6, Essence of calculus",15.6,2300000
+114,m2MIpDrF7Es,"What's so special about Euler's number e? | Chapter 5, Essence of calculus",13.8,5100000
+115,YG15m2VwSjA,"Visualizing the chain rule and product rule | Chapter 4, Essence of calculus",15.9,2300000
+116,S0_qX4VJhMQ,"Derivative formulas through geometry | Chapter 3, Essence of calculus",17.6,3500000
+117,9vKqVkMQHKk,"The paradox of the derivative | Chapter 2, Essence of calculus",16.8,4400000
+118,WUvTyaaNkzM,The essence of calculus,17.1,11000000
+119,mvmuCPvRoWQ,Euler's formula with introductory group theory,24.5,2700000
+120,gB9n2gHsHN4,Fractals are typically not self-similar,21.6,4500000
+121,IxNb1WG_Ido,Tattoos on Math,8.2,764000
+122,sD0NjbwqlYw,But what is the Riemann zeta function? Visualizing analytic continuation,22.2,5300000
+123,bdMfjfT0lKk,"Binary, Hanoi, and Sierpinski, part 2",13.7,327000
+124,2SUvWfNJSsM,"Binary, Hanoi and Sierpinski, part 1",14.0,771000
+125,R7p-nPg8t_g,3blue1brown channel trailer,1.5,409000
+126,AmgkSdhK4K8,Who cares about topology?   (Old version),16.5,3200000
+127,TgKwz5Ikpc8,"Abstract vector spaces | Chapter 16, Essence of linear algebra",16.8,1700000
+128,PFDu9oVAE-g,"Eigenvectors and eigenvalues | Chapter 14, Essence of linear algebra",17.3,6300000
+129,P2LTAUO1TdA,"Change of basis | Chapter 13, Essence of linear algebra",12.8,2500000
+130,eu6i7WJeinw,"Cross products | Chapter 10, Essence of linear algebra",8.9,2400000
+131,BaM7OCEm3G0,"Cross products in the light of linear transformations | Chapter 11, Essence of linear algebra",13.2,1600000
+132,LyGKycYT2v0,"Dot products and duality | Chapter 9, Essence of linear algebra",14.2,3300000
+133,v8VSDg_WQlA,"Nonsquare matrices as transformations between dimensions | Chapter 8, Essence of linear algebra",4.5,2000000
+134,uQhTuRlWMxw,"Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra",12.2,3800000
+135,Ip3X9LOh2dk,"The determinant | Chapter 6, Essence of linear algebra",10.1,4900000
+136,rHLEWRxRGiM,"Three-dimensional linear transformations | Chapter 5, Essence of linear algebra",4.8,2700000
+137,XkY2DOUCWMU,"Matrix multiplication as composition | Chapter 4, Essence of linear algebra",10.1,4400000
+138,kYB8IZa5AuE,"Linear transformations and matrices | Chapter 3, Essence of linear algebra",11.0,7100000
+139,k7RM-ot2NWY,"Linear combinations, span, and basis vectors | Chapter 2, Essence of linear algebra",10.0,7400000
+140,fNk_zzaMoSs,"Vectors | Chapter 1, Essence of linear algebra",9.9,12000000
+141,kjBOesZCoqc,Essence of linear algebra preview,5.2,2700000
+142,sULa9Lc4pck,Triangle of Power,7.7,810000
+143,Iq1a_KJTWJ8,Snell's law proof using springs,4.0,222000
+144,Cld0p3a43fU,"The Brachistochrone, with Steven Strogatz",16.0,1400000
+145,RU0wScIj36o,Fractal charm: Space filling curves,2.6,2000000
+146,cyW5z-M2yzw,Music And Measure Theory,13.2,1600000
+147,1SMmc9gQmHQ,How to count to 1000 on two hands,2.6,454000
+148,XFDM1ip5HdU,What does it feel like to invent math?,15.1,4500000
+149,-9OUyo8NFZg,Euler's Formula and Graph Duality,7.5,527000
+150,zLzLxVeqdQg,Euler's Formula Poem,1.1,183000
+151,F_0yfvm0UoU,"e to the pi i, a nontraditional take (old version)",6.2,2700000
