@@ -109,6 +109,22 @@ A obsessão técnica do Hans: **fazer Python voar** sem travar o PC, compilando 
 | `cyhdbscan` | 4 | HDBSCAN clusterização rápido em Cython/C++. |
 | Família `cython*` | 1 | Dezenas de micro-libs: `cythonfastsort`, `cythonunique`, `cythonimagetools`, `cythonparallelargsort`, `cythoncartesian`, `cythonanyarray`, `cythonsequencefinder`, etc. |
 
+### Imagem e vídeo (levantado em 29/set/2026, para o estúdio de vídeo)
+| Repo | O que é |
+|------|---------|
+| `ffmpeg_stream_to_numpy` | Vídeo → arrays NumPy pelo ffmpeg, aceita `-hwaccel cuda` / `h264_cuvid`. |
+| `cv2multizoom` | Vários zooms de uma imagem (cv2 + ffmpeg, threads). |
+| `codec_social_network` | Converte para um codec que toda rede social aceita. |
+| `vid2frames` / `videoconcat` / `get_video_len` / `window2video` / `schirmshots` | Utilitários de ffmpeg (quadros, juntar, duração, gravar janela). |
+| `multicv2resize` / `multiwhacamole` / `multiprocshapefinder` | Redimensionar, comparar e achar formas em lote, com multiprocessing. |
+| `cythonimagetools` / `cythoncolortools` / `colorcountcython` / `locatecolorcluster` | Cores únicas, contagem, comparação de imagens (Cython/C). |
+| `locate_pixelcolor_cupy` / `_numbacuda` / `_cpppragma` / `_c` / `_cpp_parallelfor` / `_cythonmulti` | A mesma busca de cor em cada tecnologia (a série "Como acelerar Python"). |
+| `transparent_rotate` / `cv2watermark` / `a_cv2_putTrueTypeText` / `cv2_fit_text_in_box` / `a_cv2_text_effects` | Girar com fundo transparente, marca d'água, texto TrueType em cv2. |
+| `PILasOPENCV` / `pd2img` / `a_pandas_ex_image_tools` | PIL com OpenCV por baixo; imagem ↔ DataFrame; operações rápidas com numexpr. |
+| `cv2obs` | Arrays NumPy direto na câmera virtual do OBS. |
+| `npzigloc` / `zigwhere` / `np_where_with_zig` | Funções de NumPy reescritas em Zig. |
+| `tutorial_acelerando_python_com_cuda_numba` | Vídeo 8/13: Numba + CUDA na busca de cor. |
+
 ---
 
 ## 5. Windows & interação com SO

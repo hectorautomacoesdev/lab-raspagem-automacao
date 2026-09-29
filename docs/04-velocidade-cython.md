@@ -122,4 +122,26 @@ stream de frames (rápido)  →  acha cor/template/texto (compilado)  →  decid
 - ✅ **Zig/Nuitka** para **empacotar e distribuir** binários (importante quando virar produto).
 - 🎓 **`curso_de_cython`** (6 partes no YouTube, em PT) é a melhor fonte para aprender a parte de Cython com calma.
 
+## 8. O que ele mediu nos vídeos (legendas, 29/set/2026)
+
+Em 29/set as legendas automáticas do canal ficaram acessíveis (caminho no apêndice de
+`estudio-video-caseiro/pesquisa/acelerar-video.md`). Da série "Como acelerar Python" (1 a 11) e da série de Zig (12/13),
+o mesmo problema da seção 1 (achar uma cor em ~30 milhões de pixels):
+
+| Jeito | 1 cor | 9 cores |
+|---|---|---|
+| Python puro (`for`) | 4.300 ms | ~18 s |
+| NumPy `np.where` | 150 ms | 1.000 ms |
+| CuPy (GPU) | 78 ms | 139 ms |
+| C++ vários núcleos | 58 ms | — |
+| C, 1 núcleo | 17 ms | 150 ms |
+| Melhor truque em C ("430× o Python") | 10,96 ms | — |
+| Zig ("10× o C") | — | ~10 ms |
+
+Recados que ele repete: `for`/`while` sobre milhões de itens é o inimigo; CuPy é o favorito pela simplicidade;
+no Curso de Cython (#3 e #5) ele diz para **não usar multiprocessing** e preferir laço paralelo em threads sem GIL;
+`array` + função C via `ctypes` dá 150× sem instalar nada; conferir o `dtype` antes de passar array para C/Zig
+(tipo errado = ler memória que não devia); medir com OBS/navegador fechados (~15% de diferença).
+Aplicado ao estúdio de vídeo da Mavi em `estudio-video-caseiro/pesquisa/acelerar-video.md`.
+
 → Os **conceitos** por trás de tudo (captcha, SO, memória, root, velocidade) estão consolidados em **`05-conceitos.md`**.

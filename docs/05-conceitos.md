@@ -3,6 +3,7 @@
 > Os **conceitos transversais** que o Hans ensina no canal [@pyajudeme9245](https://www.youtube.com/@pyajudeme9245) e aplica nos repos. Esta é a "filosofia" por trás das ferramentas.
 >
 > **Nota de honestidade:** não assisti aos vídeos (são em vídeo/PT e não há transcrição acessível às ferramentas). Caracterizei o canal pelos repositórios `tutorial_*`, que **são o código que acompanha cada vídeo** e trazem a descrição do conteúdo. Onde é interpretação minha, está marcado.
+> **Atualização (29/set/2026):** as legendas automáticas passaram a ser acessíveis; os números e recados da série "Como acelerar Python" estão em [`04`](04-velocidade-cython.md) §8.
 
 ## A meta-ideia que une tudo: "ter sempre um degrau a mais"
 
